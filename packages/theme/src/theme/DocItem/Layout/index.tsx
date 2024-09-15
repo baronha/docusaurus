@@ -53,8 +53,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
 		<div className={styles.docContainer}>
 			<div
 				className={clsx(
-					styles.docContentContainer,
-					!docTOC.hidden && styles.docItemCol
+					styles.docContentContainer
 				)}
 			>
 				<ContentVisibility metadata={metadata} />
