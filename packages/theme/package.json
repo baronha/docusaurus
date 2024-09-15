@@ -1,0 +1,35 @@
+{
+  "name": "@gorhom/docusaurus-theme",
+  "description": "A custom theme based on classic theme.",
+  "version": "1.0.0",
+  "author": "Mo Gorhom <gorhom.dev@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "src/theme-gorhom.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorhom/docusaurus"
+  },
+  "scripts": {
+    "watch": "run-p -c copy:watch build:watch",
+    "build": "tsc --build && node --experimental-modules ../../scripts/copyUntypedFiles.js",
+    "build:watch": "tsc --build --watch",
+    "copy:watch": "node --experimental-modules ../../scripts/copyUntypedFiles.js --watch",
+    "clone": "rsync -r --ignore-existing ../../node_modules/@docusaurus/theme-classic/src/theme/ ./src/theme"
+  },
+  "dependencies": {
+    "@docusaurus/theme-classic": "3.5.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.17.7",
+    "@types/react": "18.3.5",
+    "fs-extra": "11.2.0",
+    "lodash": "4.17.21",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.6.2"
+  }
+}

@@ -1,0 +1,1 @@
+This is a custom theme & preset based on [Docusaurus](https://docusaurus.io/) classic theme.
