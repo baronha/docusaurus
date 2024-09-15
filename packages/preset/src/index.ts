@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { themes as prismThemes } from "prism-react-renderer";
 import type {
 	Preset,
 	LoadContext,
@@ -43,6 +44,29 @@ export default function preset(
 		googleTagManager,
 		...rest
 	} = opts;
+
+	// overrides prism themes
+	themeConfig.prism = {
+		...(themeConfig.prism ?? {}),
+		theme: prismThemes.github,
+		darkTheme: prismThemes.dracula,
+	}
+
+	// overrides footer
+	themeConfig.footer = {
+		...(themeConfig.footer ?? {}),
+		copyright: `Open Source by <a rel="noreferrer" href="https://gorhom.dev/" target="_blank">Mo Gorhom</a>.`,
+		links: [
+			{
+				label: "Github",
+				href: "https://github.com/gorhom",
+			},
+			{
+				label: "X (Twitter)",
+				href: "https://twitter.com/gorhom",
+			},
+		]
+	}
 
 	const themes: PluginConfig[] = [];
 	themes.push(makePluginConfig("@gorhom/docusaurus-theme", theme));
