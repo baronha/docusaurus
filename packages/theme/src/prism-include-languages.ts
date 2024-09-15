@@ -5,15 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
- .docRoot {
-  display: flex;
-  width: 100%;
-  max-width: var(--ifm-container-width);
-}
+import {Prism} from 'prism-react-renderer';
+import prismIncludeLanguages from '@theme/prism-include-languages';
 
-.docsWrapper {
-  display: flex;
-  flex: 1 0 auto;
-  justify-content: center;
-}
-
+prismIncludeLanguages(Prism);

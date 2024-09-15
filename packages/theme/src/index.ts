@@ -28,7 +28,6 @@ export default function theme(
 	context: LoadContext,
 	options: PluginOptions
 ): Plugin<undefined> {
-  console.log("XXX", context, options)
 	const { siteStorage } = context;
 	const themeConfig = context.siteConfig.themeConfig as ThemeConfig;
 	const {
@@ -55,6 +54,9 @@ export default function theme(
 				"./nprogress",
 			];
 			modules.push(...customCss.map((p) => path.resolve(context.siteDir, p)));
+
+			// push custom css
+			modules.push(path.resolve(__dirname, 'custom.css'));
 			return modules;
 		},
 
@@ -98,4 +100,4 @@ ${announcementBar ? getAnnouncementBarInlineScript({ siteStorage }) : ""}
 }
 
 export { getSwizzleConfig } from "./getSwizzleConfig";
-export {validateThemeConfig, validateOptions} from './options';
+export { validateThemeConfig, validateOptions } from "./options";
