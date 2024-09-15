@@ -1641,3 +1641,11 @@ declare module '@theme/prism-include-languages' {
 declare module '@theme/DocBreadcrumbs/Items/Home' {
   export default function HomeBreadcrumbItem(): JSX.Element;
 }
+
+declare module '@theme/Video' {
+  export interface Props {
+    title: string;
+    url: string;
+  }
+  export default function Video(props: Props): JSX.Element
+}
