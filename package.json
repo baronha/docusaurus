@@ -22,7 +22,7 @@
 		"build": "yarn lerna run build --no-private",
 		"clone": "yarn lerna run clone --no-private",
 		"watch": "yarn lerna run --parallel watch",
-		"publish": "yarn lerna publish",
+		"publish": "yarn lerna publish --conventional-commits",
 		"changelog": "lerna-changelog",
 		"lock:update": "npx --yes yarn-deduplicate",
 		"postinstall": "yarn lock:update && yarn build"
