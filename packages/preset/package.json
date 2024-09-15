@@ -1,7 +1,7 @@
 {
   "name": "@gorhom/docusaurus-preset",
   "description": "A custom preset based on classic theme.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Mo Gorhom <gorhom.dev@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
@@ -19,8 +19,8 @@
     "clone": "rsync -r --ignore-existing ../../node_modules/@docusaurus/preset-classic/src ./"
   },
   "dependencies": {
-    "@gorhom/docusaurus-theme": "*",
-    "@docusaurus/preset-classic": "3.5.2"
+    "@docusaurus/preset-classic": "3.5.2",
+    "@gorhom/docusaurus-theme": "^1.0.1"
   },
   "devDependencies": {
     "@types/lodash": "4.17.7",
