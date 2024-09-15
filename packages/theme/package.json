@@ -26,6 +26,9 @@
   "devDependencies": {
     "@types/lodash": "4.17.7",
     "@types/react": "18.3.5",
+    "@types/nprogress": "0.2.3",
+    "nprogress": "0.2.0",
+    "postcss": "8.4.26",
     "fs-extra": "11.2.0",
     "lodash": "4.17.21",
     "react": "18.3.1",
